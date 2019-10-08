@@ -1,0 +1,130 @@
+.container {
+    /*Using Bootstrap Grid system for easy responsivenss*/
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family:'Faster One', cursive;
+
+}
+
+.gameTitle {
+    font-size: 4.0rem;
+}
+
+h2 {
+
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+h3, h2, p, li {
+    font-family: 'Neucha', cursive;
+    padding-top: 5px;
+    }
+
+#logo {
+
+    color: red;
+    background-color: gold;
+    margin-bottom: 3px;
+    font-size: 4.0rem;
+}
+#row1 {
+    height: auto;
+    overflow: hidden;
+    background-color: whitesmoke;
+    color:blue;
+    border: 5px solid gold;
+    margin-bottom: 3px;
+
+}
+
+#row2col1 {
+    height: 115px;
+    overflow: hidden;
+    background-color: gold;
+    color:blue;
+    border: 5px solid red;
+  
+    
+}
+
+.score {
+
+    padding-top: 0;
+    margin-bottom: 5px;
+}
+.scoreText {
+    margin-bottom: 0;
+    
+}
+
+#row2col3 {
+    height: 115px;
+    overflow: hidden;
+    background-color: gold;
+    color:blue;
+    border: 5px solid red;
+ 
+}
+
+ul, li {
+    padding-bottom: 0;
+} 
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+/*image columns have width of 16.65% each to fit in row*/
+.crystal-row {
+flex: 16.65%;
+max-width: 16.65%;
+padding: 0 4 px;
+
+}
+
+img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+#redRuby {
+    cursor: pointer;
+    
+ }
+      
+#diamond {
+    cursor: pointer;
+ }     
+
+#yellowSapphire {
+    cursor: pointer;
+
+ }
+      
+#greenEmerald {
+    cursor: pointer;
+ }
+      
+ 
+#row3 {
+    height: auto;
+    overflow: hidden;
+    background-color: whitesmoke;
+    color:blue;
+    border: 5px solid gold;
+    margin-bottom: 3px;
+
+}
+/* background-image: url("../images/treasureChest.jpg"); */
