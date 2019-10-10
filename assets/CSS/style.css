@@ -1,3 +1,16 @@
+/*PSEUDOCODE
+/*Needed variables:  Wins, Losses, Computer Generated Number, User Total Score,
+/*Computer generates a random value from 19-120
+/*Each crystal generates a randmo value from 1-12
+/*Crystals values change at game reset
+/*Games resets if User guesses correct number
+/*User loses if they exceed random number && game resets
+/*Wins & Losses variable does not reset
+/* */
+
+
+
+
 .container {
     /*Using Bootstrap Grid system for easy responsivenss*/
     width: 100%;
@@ -19,9 +32,10 @@ h2 {
     padding-bottom: 2px;
 }
 
-h3, h2, p, li {
+h4, h3, h2, p, li {
     font-family: 'Neucha', cursive;
     padding-top: 5px;
+    font-weight: bold;
     }
 
 #logo {
@@ -30,6 +44,7 @@ h3, h2, p, li {
     background-color: gold;
     margin-bottom: 3px;
     font-size: 4.0rem;
+       
 }
 #row1 {
     height: auto;
