@@ -1,9 +1,16 @@
 $(document).ready(function () {
 
+    //This toggles the game instructions button to hide this lengthy box
+    $(".btn").on('click', function () {
+        $('.hideMe').slideToggle(1000);
+
+    });
     // Initial Variables
     let computerNumber = Math.floor(Math.random() * 120 + 21);
     //Logging computer's number to console for troubleshooting if necessary
     console.log(computerNumber);
+    //This displays the computer-generated random number in the html
+    $(".score").text(computerNumber);
     let wins = '';
     let losses = '';
     let userTotal = 0;
@@ -11,72 +18,45 @@ $(document).ready(function () {
     let diamond = Math.floor(Math.random() * 12) + 1;
     let yellowSapphire = Math.floor(Math.random() * 12) + 1;
     let greenEmerald = Math.floor(Math.random() * 12) + 1;
-    let crystalsValue = //sum of four crystals
-
-        //This toggles the game instructions button to hide the lengthy instructions
-        $(".btn").on('click', function () {
-            $('.hideMe').slideToggle(1000);
-
-        });
-
-    //This will display the sum of the crystal values
-    $("#placeholder").text(userTotal);
-
-    //Below item will test ruby adding and data transfer function
-    $("#redRuby").click(function () {
-        $("#placeholder").text(redRuby);
-    });
-    //Delete above item before git push
+    let crystalSum = 0;
 
 
 
+    function crystalRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
 
-    //Hover functions over each ruby setup for alerts for troubleshooting.  
-    $("#redRuby").hover(function () {
-        console.log(redRuby);
-    });
+    }
+    function crystalsSum(sum) {
+        crystalSum += sum
+        console.log(crystalSum);
+        $("#placeholder").html(crystalSum);
+    }
 
-    $("#diamond").hover(function () {
-        console.log(diamond);
-    });
-    $("#yellowSapphire").hover(function () {
-        console.log(yellowSapphire);
-    });
-    $("#greenEmerald").hover(function () {
-        console.log(greenEmerald);
-    });
+    $('#redRuby').click(function () {
+        crystalsSum(redRuby);
+    })
 
-    //This displays the computer-generated random number in the html
-    $(".score").text(computerNumber);
+    $("#diamond").click(function () {
+        crystalsSum(diamond);
+    })
+
+    $("#yellowSapphire").click(function () {
+        crystalsSum(yellowSapphire);
+    })
+
+    $("#greenEmerald").click(function () {
+        crystalsSum(greenEmerald);
+    })
 
 
-    //This alerts User when his score matches the computer's Number
-
-    if (userTotal === computerNumber) {
+    if (crystalSum === computerNumber) {
         alert("You win!");
     }
 
-    else if (userTotal >= computerNumber) {
+    else if (crystalSum > computerNumber) {
         alert("You lose!!");
-        //resetGame //create function to reset game without resetting Wins/Losses variable
+        losses++;
     }
-
-
-
-    // $('#random-button').click(function() {
-    //     let lottoNumber = '';
-
-    //     for(let i = 0 ; i < 9; i++) {
-    //       const random = Math.floor(Math.random() * 10);
-
-    //       lottoNumber = random + lottoNumber;
-    //     } // loop end
-
-    //     $('#random-number').text(lottoNumber);
-    //   })
-
-
-
 
 
 
@@ -85,16 +65,35 @@ $(document).ready(function () {
 
 
 
+//This alerts User when his score matches the computer's Number
+
+// if (crystalSum === computerNumber) {
+//     alert("You win!");
+// }
+
+// else if (crystalSum > computerNumber) {
+//     alert("You lose!!");
+//     losses++;
+// }
+
+//     //resetGame //create function to reset game without resetting Wins/Losses variable
+
+
+// //Hover functions over each ruby setup for alerts for troubleshooting.  
+// $("#redRuby").hover(function () {
+//     console.log(redRuby);
+// });
+
+// $("#diamond").hover(function () {
+//     console.log(diamond);
+// });
+// $("#yellowSapphire").hover(function () {
+//     console.log(yellowSapphire);
+// });
+// $("#greenEmerald").hover(function () {
+//     console.log(greenEmerald);
+ //});
 
 
 
-
-
-
-
-
-
-
-
-//});
 
