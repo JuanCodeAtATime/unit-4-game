@@ -9,16 +9,22 @@
 /* */
 
 
+body {
+    background-image: url("../CSS/crystals.jpg");
+    background-size: cover;
+    size: 100%;
 
+}
 
 .container {
     /*Using Bootstrap Grid system for easy responsivenss*/
-    width: 100%;
+    width: 75%;
     text-align: center;
+    margin-top: 10px;
 }
 
 h1 {
-    font-family:'Faster One', cursive;
+    font-family: 'Michroma', sans-serif;
 
 }
 
@@ -33,35 +39,42 @@ h2 {
 }
 
 h4, h3, h2, p, li {
-    font-family: 'Neucha', cursive;
+    font-family: 'Michroma', sans-serif;
     padding-top: 5px;
     font-weight: bold;
     }
 
 #logo {
-
-    color: red;
-    background-color: gold;
-    margin-bottom: 3px;
+    
+    color: white;
+    background-color: #E92EFB;
+    /* margin: 5px 0px 3px 0px; */
     font-size: 4.0rem;
-       
+    
 }
+
+header {
+
+    margin: 2px;
+}
+       
+
 #row1 {
     height: auto;
     overflow: hidden;
     background-color: whitesmoke;
     color:blue;
-    border: 5px solid gold;
+    border: 5px solid #E92EFB;
     margin-bottom: 3px;
 
 }
 
 #row2col1 {
-    height: 115px;
+    height: auto;
     overflow: hidden;
-    background-color: gold;
-    color:blue;
-    border: 5px solid red;
+    background-color: #E92EFB;
+    color:white;
+    border: 5px solid white;
   
     
 }
@@ -77,11 +90,11 @@ h4, h3, h2, p, li {
 }
 
 #row2col3 {
-    height: 115px;
+    height: auto;
     overflow: hidden;
-    background-color: gold;
-    color:blue;
-    border: 5px solid red;
+    background-color: #E92EFB;
+    color:white;
+    border: 5px solid white;
  
 }
 
@@ -92,6 +105,8 @@ ul, li {
 .btn {
     margin-top: 5px;
     margin-bottom: 5px;
+    /* background-color: #1250A6;
+    border: 2px solid #E92EFB; */
 
 }
 
@@ -100,6 +115,7 @@ ul, li {
 flex: 16.65%;
 max-width: 16.65%;
 padding: 0 4 px;
+background-color: white;
 
 }
 
@@ -137,8 +153,8 @@ img:hover {
     height: auto;
     overflow: hidden;
     background-color: whitesmoke;
-    color:blue;
-    border: 5px solid gold;
+    color:#1250A6;
+    border: 5px solid #E92EFB;
     margin-bottom: 3px;
 
 }

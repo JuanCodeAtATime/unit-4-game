@@ -9,10 +9,9 @@ $(document).ready(function () {
     let computerNumber = Math.floor(Math.random() * 120 + 21);
     //Logging computer's number to console for troubleshooting if necessary
     console.log(computerNumber);
-    //This displays the computer-generated random number in the html
-    $(".score").text(computerNumber);
-    let wins = '';
-    let losses = '';
+
+    let wins = 1;
+    let losses = 1;
     let userTotal = 0;
     let redRuby = Math.floor(Math.random() * 12) + 1;
     let diamond = Math.floor(Math.random() * 12) + 1;
@@ -21,16 +20,47 @@ $(document).ready(function () {
     let crystalSum = 0;
 
 
+    function updateLosses() {
+        document.querySelector("#losses").innerHTML = "Losses: " + losses;
+    }
+
+    function updateWins() {
+        document.querySelector("#wins").innerHTML = "Wins: " + wins;
+    }
+
+    // function resetComputerNumber() {
+    //     document.querySelector(".score").innerHTML = Math.floor(Math.random() * 120 + 21);
+    // }
 
     function crystalRandomNumber(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
+
+
 
     }
     function crystalsSum(sum) {
         crystalSum += sum
         console.log(crystalSum);
         $("#placeholder").html(crystalSum);
+
+        if (crystalSum === computerNumber) {
+            alert("You win!");
+            updateWins();
+            // resetComputerNumber();
+
+        }
+
+        else if (crystalSum > computerNumber) {
+            alert("You lose!!");
+            updateLosses()
+            losses++;
+            // resetComputerNumber();
+
+        }
+
     }
+    //This displays the computer-generated random number in the html
+    $(".score").text(computerNumber);
 
     $('#redRuby').click(function () {
         crystalsSum(redRuby);
@@ -49,14 +79,14 @@ $(document).ready(function () {
     })
 
 
-    if (crystalSum === computerNumber) {
-        alert("You win!");
-    }
+    // if (crystalSum === computerNumber) {
+    //     alert("You win!");
+    // }
 
-    else if (crystalSum > computerNumber) {
-        alert("You lose!!");
-        losses++;
-    }
+    // else if (crystalSum > computerNumber) {
+    //     alert("You lose!!");
+    //     losses++;
+    // }
 
 
 
