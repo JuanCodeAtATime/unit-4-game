@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
-
     //This toggles the game instructions button to hide this lengthy box
     $("#btnGame").on('click', function () {
         $('.hideMe').slideToggle(1000);
-
     });
+
+
+
     // Initializing Variables
     let computerNumber = Math.floor(Math.random() * 120 + 21);
     //Logging computer's number to console for troubleshooting if necessary
@@ -83,7 +84,6 @@ $(document).ready(function () {
     $("#greenEmerald").click(function () {
         crystalsSum(greenEmerald);
     })
-
 
 
 });

@@ -1,7 +1,7 @@
 /*PSEUDOCODE
 /*Needed variables:  Wins, Losses, Computer Generated Number, User Total Score,
 /*Computer generates a random value from 19-120
-/*Each crystal generates a randmo value from 1-12
+/*Each crystal generates a random value from 1-12
 /*Crystals values change at game reset
 /*Games resets if User guesses correct number
 /*User loses if they exceed random number && game resets
@@ -42,22 +42,13 @@ a {
     margin-top: 10px;
 }
 
-h1 {
-    font-family: 'Michroma', sans-serif;
-
-}
-
-.gameTitle {
-    font-size: 4.0rem;
-}
-
 h2 {
 
     font-weight: bold;
     padding-bottom: 2px;
 }
 
-h4, h3, h2, p, li {
+h1, h4, h3, h2, p, li {
     font-family: 'Michroma', sans-serif;
     padding-top: 5px;
     font-weight: bold;
@@ -67,7 +58,7 @@ h4, h3, h2, p, li {
     
     color: white;
     background-color: rgb(233,46,251);opacity:0.85;
-    font-size: 4.0rem;
+    font-size: 3.0rem;
     
 }
 
@@ -95,8 +86,7 @@ header {
     border: 5px solid white;
     text-align: center;
     padding-right: 10px;
-     
-    
+        
 }
 
 .score {
@@ -110,7 +100,6 @@ header {
     padding-right: 5px;
     
 }
-
 #row2col3 {
     height: auto;
     overflow: hidden;
@@ -127,17 +116,16 @@ ul, li {
 .btn {
     margin-top: 5px;
     margin-bottom: 5px;
-    /* background-color: #1250A6;
-    border: 2px solid #E92EFB; */
+   
 
 }
 
-/*image columns have width of 16.65% each to fit in row*/
 .crystal-row {
-flex: 16.65%;
-max-width: 16.65%;
+max-width: 25%;
 padding: 0 4 px;
 background-color: white;
+height: auto;
+overflow: hidden;
 
 }
 
@@ -178,7 +166,6 @@ img:hover {
     color:#1250A6;
     border: 5px solid rgb(233,46,251);opacity:0.85;
     margin-bottom: 3px;
-
 }
 
-/* background-image: url("../images/treasureChest.jpg"); */
+
